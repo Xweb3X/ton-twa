@@ -2,11 +2,16 @@ import './App.css';
 import { TonConnectButton } from '@tonconnect/ui-react';
 import { useTonConnect } from './hooks/useTonConnect';
 import { useCounterContract } from './hooks/useCounterContract';
+import WebApp from '@twa-dev/sdk'
 
 function App() {
   const { connected } = useTonConnect();
   const { value, address, sendIncrement } = useCounterContract();
 
+  var a = WebApp.showAlert;
+  if (a != null) {
+
+  }
   return (
     <div className='App'>
       <div className='Container'>
